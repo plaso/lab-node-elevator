@@ -1,3 +1,5 @@
+const Person = require('./person.js');
+
 class Elevator {
   constructor(){
     this.floor      = 0;
@@ -31,7 +33,8 @@ class Elevator {
     }
   }
   call() {
-
+    let person = new Person("Pepe", 0, 3);
+    this.requests.push(person);
   }
   log() {
     console.log(`Direction: up | Floor: ${this.floor}`);
